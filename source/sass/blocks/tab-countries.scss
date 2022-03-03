@@ -1,0 +1,143 @@
+.tab-countries {
+  padding: rem(124) 0 0 0;
+
+  // .tab-countries__content
+  &__content {
+    padding: rem(65) 0 0 0;
+
+    @media (max-width: $tablet) {
+      padding: rem(30) 0 0 0;
+    }
+  }
+
+  // .tab-countries__tablinks
+  &__tablinks {
+    overflow: hidden;
+    display: inline-flex;
+    column-gap: rem(99);
+    padding: 0 0 rem(15) 0;
+    border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+  }
+
+  // .tab-countries__button
+  &__link {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+    color: $mainColor;
+    opacity: 0.3;
+    border: none;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+
+    &--active {
+      color: $mainOrangeColor;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // .tab-countries__tabcontent
+  &__tabcontent {
+    position: relative;
+    display: none;
+
+    &--active {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("column-gap", 100, 20);
+
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+      }
+    }
+  }
+
+  // .tab-countries__body
+  &__body {
+    flex: 0 1 370px;
+    min-width: 320px;
+
+    @media (max-width: $tablet) {
+      flex: auto;
+      text-align: center;
+    }
+  }
+
+  // .tab-countries__button
+  &__button {
+    @media (max-width: $tablet) {
+      display: inline-block;
+      min-width: 250px;
+      text-align: center;
+    }
+  }
+
+  // .tab-countries__title
+  h2 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(20);
+    margin: 0 0 rem(30) 0;
+    font-weight: 600;
+    font-size: rem(55);
+    line-height: math.div(90, 55);
+
+    &::after {
+      content: "";
+      width: 85%;
+      height: 3px;
+      background-color: $mainOrangeColor;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      margin: 0 0 rem(20) 0;
+      font-size: rem(30);
+      line-height: math.div(45, 30);
+    }
+  }
+
+  // .tab-countries__text
+  p {
+    line-height: math.div(28, 16);
+    color: $mainColor;
+    opacity: 0.7;
+
+    &:not(:last-child) {
+      margin: 0 0 rem(50) 0;
+
+      @media (max-width: $tablet) {
+        margin: 0 0 rem(20) 0;
+      }
+    }
+  }
+
+  // .tab-countries__media
+  &__media {
+    @media (max-width: $tablet) {
+      flex: 1 0 110%;
+      margin: 0 -30px 0 -30px;
+    }
+  }
+
+  // .tab-countries__img
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: $tablet) {
+    padding: rem(95) 0 0 0;
+  }
+}

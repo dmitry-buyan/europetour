@@ -1,0 +1,52 @@
+.feedback {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  padding: rem(30);
+  width: 382px;
+  background-color: #ffffff;
+
+  h3 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(10);
+    margin: 0 0 rem(20) 0;
+    font-weight: 500;
+    font-size: rem(30);
+    line-height: math.div(37, 30);
+
+    &::after {
+      content: "";
+      width: 60%;
+      height: 1px;
+      background-color: $mainOrangeColor;
+    }
+  }
+
+  p {
+    font-size: rem(14);
+    line-height: math.div(28, 14);
+
+    &:not(:last-child) {
+      margin: 0 0 rem(35) 0;
+    }
+  }
+
+  // .feedback__author
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    right: unset;
+    bottom: 0;
+  }
+}

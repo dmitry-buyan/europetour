@@ -1,0 +1,103 @@
+.price {
+  // .price__container
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  // .price__info
+  &__info {
+    box-sizing: border-box;
+    flex: 0 1 310px;
+    padding: rem(20);
+    @include adaptiveValue("margin-left", 90, 20);
+
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  // .price__body
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(30);
+  }
+
+  // .price__title
+  &__title {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(20);
+    margin: 0 0 rem(30) 0;
+    font-weight: 600;
+    font-size: rem(55);
+    line-height: math.div(90, 55);
+
+    &::after {
+      content: "";
+      width: 105%;
+      height: 3px;
+      background-color: $mainOrangeColor;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  // .price__text
+  &__text {
+    line-height: math.div(27, 16);
+    opacity: 0.7;
+
+    &:not(:last-child) {
+      margin: 0 0 rem(60) 0;
+    }
+  }
+
+  // .price__contact
+  &__contact {
+  }
+
+  // .price__contact-title
+  &__contact-title {
+    margin: 0 0 rem(13) rem(35);
+    font-weight: 400;
+    font-size: rem(22);
+    line-height: math.div(34, 22);
+    color: $mainDarkColor;
+  }
+
+  // .price__phone
+  &__phone {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(20);
+    font-size: rem(20);
+    line-height: math.div(32, 20);
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+      color: $mainOrangeColor;
+    }
+  }
+
+  // .price__phone-icon
+  &__phone-icon {
+  }
+
+  // .price__card
+  &__card {
+  }
+}

@@ -1,0 +1,36 @@
+.button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  padding: rem(30) rem(40);
+  font-weight: 700;
+  font-size: rem(12);
+  line-height: math.div(15, 12);
+  align-items: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: $mainOrangeColor;
+  text-decoration: none;
+
+  &--promo {
+    &::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background: url("../img/arrow-icon.svg") no-repeat center / contain;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $lightOrangeColor;
+  }
+
+  @media (max-width: $tablet) {
+    font-weight: 500;
+    font-size: rem(10);
+    line-height: math.div(12, 10);
+    padding: rem(19) rem(40);
+  }
+}

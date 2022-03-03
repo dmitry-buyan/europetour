@@ -1,0 +1,116 @@
+.page {
+  // .page__promo
+  &__promo {
+    padding: rem(185) 0 rem(295) 0;
+    background: url("../img/promo.jpg") no-repeat top 0 center / cover;
+
+    @media (max-width: $tablet) {
+      padding: rem(60) 0 rem(83) 0;
+    }
+
+    @media (max-width: $mobile) {
+      padding: rem(81) 0;
+    }
+  }
+
+  // .page__container
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  // .page__body
+  &__body {
+    max-width: 415px;
+    padding: 0 rem(60) 0 0;
+
+    @media (max-width: $tablet) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  // .page__title
+  &__title {
+    font-weight: 600;
+    font-size: rem(55);
+    line-height: math.div(80, 55);
+    letter-spacing: -1px;
+    color: #ffffff;
+
+    &:not(:last-child) {
+      margin: 0 0 rem(30) 0;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: rem(30);
+      line-height: math.div(45, 30);
+
+      &:not(:last-child) {
+        margin: 0 0 rem(15) 0;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(24);
+      line-height: math.div(36, 24);
+      margin: 0;
+    }
+  }
+
+  // .page__text
+  &__text {
+    line-height: math.div(27, 16);
+    color: #ffffff;
+
+    &:not(:last-child) {
+      margin: 0 0 rem(40) 0;
+    }
+
+    @media (max-width: $tablet) {
+      &:not(:last-child) {
+        margin: 0 0 rem(15) 0;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      color: $mainColor;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin: 0 0 rem(20) 0;
+      }
+    }
+  }
+
+  // .page__button
+  &__button {
+    width: 340px;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      width: 250px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 288px;
+    }
+  }
+
+  // .page__countries
+  &__countries {
+  }
+
+  // .page__price
+  &__price {
+    padding: rem(234) 0 0 0;
+
+    @media (max-width: $tablet) {
+      padding: rem(112) 0 0 0;
+    }
+  }
+}

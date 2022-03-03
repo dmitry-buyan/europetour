@@ -1,0 +1,118 @@
+.countries {
+  // .countries__container
+  &__container {
+  }
+
+  // .countries__header
+  &__header {
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: rem(20) 0 0 0;
+    }
+  }
+
+  // .countries__cards
+  &__cards {
+    padding: rem(200) 0 0 0;
+
+    @media (max-width: $tablet) {
+      padding: rem(80) 0 0 0;
+    }
+  }
+
+  // .countries__top
+  &__top {
+    max-width: 360px;
+
+    @media (max-width: $tablet) {
+      max-width: none;
+      text-align: center;
+    }
+  }
+
+  // .countries__title
+  &__title {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(30);
+    margin: 0 0 rem(30) 0;
+    font-weight: 600;
+    font-size: rem(55);
+    line-height: math.div(80, 55);
+
+    &::after {
+      content: "";
+      width: percent(230, 360);
+      height: 4px;
+      background-color: $mainOrangeColor;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      margin: 0 0 rem(20) 0;
+      font-size: rem(30);
+      line-height: math.div(45, 30);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(24);
+      line-height: math.div(36, 24);
+    }
+  }
+
+  // .countries__text
+  &__text {
+    line-height: math.div(28, 16);
+    opacity: 0.7;
+    margin: 0;
+
+    @media (max-width: $tablet) {
+      margin: 0 auto;
+      max-width: 345px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+    }
+  }
+
+  // .countries__body
+  &__body {
+    padding: rem(55) 0 0 0;
+
+    @media (max-width: $tablet) {
+      padding: rem(40) 0 0 0;
+    }
+
+    @media (max-width: $mobile) {
+      padding: rem(20) 0 0 0;
+    }
+  }
+
+  // .countries__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptiveValue("column-gap", 60, 30, 1170, 768, 1);
+    row-gap: rem(100);
+
+    @media (max-width: $tablet) {
+      gap: rem(40);
+    }
+
+    @media (max-width: $mobile) {
+      row-gap: rem(35);
+    }
+  }
+
+  // .countries__card
+  &__card {
+  }
+}
